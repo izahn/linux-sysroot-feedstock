@@ -12,6 +12,11 @@ cp -Rf "${SRC_DIR}"/binary-glibc-common/* .
 
 mv usr/lib/* usr/lib64/
 rm -rf usr/lib
+
+rm -f $PWD/lib64/libnsl*.so
+rm -f $PWD/usr/lib64/libnsl.a
+rm -f $PWD/usr/lib64/libnso.so
+
 ln -s $PWD/lib64 $PWD/lib
 
 ln -s $PWD/usr/lib64 $PWD/usr/lib
